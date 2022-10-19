@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "670247851047",
+    "project_id": "rocket-ec86b",
+    "storage_bucket": "rocket-ec86b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670247851047:android:df89c4d8be7f25c6b26a02",
+        "android_client_info": {
+          "package_name": "com.rocket.rocketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670247851047-jkirmn57s1ai8b9r33oeq57au73nt5pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoOiApSWckl6I0jYx1gBHK5ijcMkGoWYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670247851047-jkirmn57s1ai8b9r33oeq57au73nt5pq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
