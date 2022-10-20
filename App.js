@@ -3,50 +3,50 @@ import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { LoginScreen, HomeScreen, RegisterScreen } from './src/screens'
+import { credentials } from './firebase.config'
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 
 import firebase from '@react-native-firebase/app';
 import RemotePushController from './src/RemotePushController';
 
-const credentials = {
-  apiKey: "AIzaSyDTtKPRVfPBuH3F2eeUM4b5uEvlzjYd2yg",
-  authDomain: "rocket-ec86b.firebaseapp.com",
-  databaseURL: "https://rocket-ec86b-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "rocket-ec86b",
-  storageBucket: "rocket-ec86b.appspot.com",
-  messagingSenderId: "670247851047",
-  appId: "1:670247851047:web:4c289e7d650206dbb26a02",
-  measurementId: "G-S6R4VV8ZKG"
-};
-
-const config = {
-  name: 'SECONDARY_APP',
-};
 
 
+
+
+  // const initFirebaseApp = async () => {
+  //   try {
+  //     await firebase.initializeApp(credentials, config);
+  //   }
+  //   catch (err) {
+  //     console.log('initFirebaseApp', err);
+  //   }
+  // }
+
+  // initFirebaseApp();
+// firebase.initializeApp(credentials, config);
 
 const Stack = createStackNavigator();
 
-export default function App() {
 
+export default function App() {
+  
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
-
-  // firebase.initializeApp(credentials, config);
+  
+  firebase.initializeApp(credentials).catch(console.log);  
 
   useEffect(() => {
-    const initFirebaseApp = async () => {
-      await firebase.initializeApp(credentials, config);
-    }
+    // const initFirebaseApp = async () => {
+    // }
 
-    initFirebaseApp();
+    // initFirebaseApp();
     
-    const apps = firebase.apps;
+    // const apps = firebase.apps;
 
-    apps.forEach(app => {
-      console.log('App name: ', app.name);
-    });
+    // apps.forEach(app => {
+    //   console.log('App name: ', app.name);
+    // });
 
 
     const usersRef = firestore().collection('users');
